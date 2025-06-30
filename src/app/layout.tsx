@@ -4,6 +4,7 @@ import './globals.css'
 import { Toaster } from 'react-hot-toast'
 import { ClerkProvider } from '@clerk/nextjs'
 import ErrorBoundary from '@/components/ErrorBoundary'
+import { Analytics } from '@vercel/analytics/next'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -49,6 +50,7 @@ export default function RootLayout({
             </div>
           </div>
           <Toaster />
+          <Analytics />
         </body>
       </html>
     )
@@ -70,6 +72,7 @@ export default function RootLayout({
               },
             }}
           />
+          <Analytics />
         </body>
       </html>
     </ClerkProvider>
