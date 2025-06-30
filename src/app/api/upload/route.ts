@@ -76,7 +76,7 @@ export async function POST(request: NextRequest) {
       analysisResult,
       analysisId,
       imageHash: fileHash,
-      pinataHash: null // Will be updated after Pinata storage
+      pinataHash: undefined // Will be updated after Pinata storage
     })
     
     console.log(`[${requestId}] Analysis stored in MongoDB:`, mongoResult)
